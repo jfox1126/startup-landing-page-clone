@@ -15,6 +15,8 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font: inherit;
+    font-size: 100%;
 }
 
 body {
@@ -32,6 +34,7 @@ body {
   width: 100%;
   background-color: white;
   border-bottom: 1px solid #DDD;
+  z-index: 100;
 }
 
 .top-nav .content {
@@ -70,12 +73,14 @@ body {
 }
 
 .intro {
+  position: relative;
   background-image: url("../img/first-background.jpg");
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
   height: 45.938rem;
   overflow: auto;
+  z-index: 10;
 }
 
 .intro .content {
@@ -119,6 +124,36 @@ button {
   margin-right: 5px;
 }
 
+.bouncing-arrow {
+  position: absolute;
+  height: 5.625rem;
+  width: 3.250rem;
+  left: 50%;
+  margin-left: -1.625rem;
+  bottom: 0;
+}
+
+.bouncing-arrow img {
+    -webkit-animation: bounce 1.2s ease-in-out infinite alternate;
+    -o-animation: bounce 1.2s ease-in-out infinite alternate;
+    animation: bounce 1.2s ease-in-out infinite alternate;
+}
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes bounce {
+    0%, 100% {margin-top: 0px;}
+    50% {margin-top: 2rem;}
+}
+/* Standard syntax */ 
+@keyframes bounce {
+    0%, 100% {margin-top: 0px;}
+    50% {margin-top: 2rem;}
+}
+
+.cases {
+  position: relative;
+}
+
 .cases .content {
   margin-top: 7.875rem;
   margin-bottom: 10rem;
@@ -150,3 +185,69 @@ button {
   font-weight: 300;
   font-size: 1.313;
 }
+
+footer .content {
+  padding-bottom: 9.375rem;
+  text-align: center;
+}
+
+footer .footer-links>li {
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  font-size: .97em;
+  padding-left: 10%;
+}
+
+.footer-links h4 {
+  margin: 1rem 0;
+}
+
+.footer-links p {
+  margin: .5rem 0 0 0;
+  font-weight: 200;
+}
+
+.footer-links a {
+  color: #838994;
+  text-decoration: none;
+}
+
+.social hr {
+  border: 0;
+  border-top: 1px solid #eaebec;
+  margin: 1.313rem 8rem 1.313rem 8rem;
+}
+
+footer .icons > li {
+  display: inline-block;
+  border: 1px solid #eaebec;
+  border-radius: 1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 1.25rem 5px;
+  padding: 0.625rem 0;
+}
+
+footer .icons > li:hover {
+    cursor: pointer;
+}
+
+footer .twitter {
+    color: #55acee;
+}
+
+footer .facebook {
+    color: #4c66a4;
+}
+
+footer .instagram {
+    color: #3f729b;
+}
+
+footer .copy {
+  font-weight: 200;
+  color: #838994;
+}
+
