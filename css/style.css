@@ -26,7 +26,7 @@ body {
 
 .content {
   margin: 0 auto;
-  width: 60rem
+  max-width: 50rem
 }
 
 .top-nav {
@@ -118,6 +118,12 @@ button {
   font-size: 1.125rem;
 }
 
+button:hover {
+    background-color: #d9400e;
+    border-color: #cf3d0e;
+    cursor: pointer;
+}
+
 .watch img {
   position: relative;
   top: 0.625rem;
@@ -170,7 +176,7 @@ button {
 }
 
 .cases .devices>li {
-  width: 33%;
+  width: 30%;
   display: inline-block;
   vertical-align: top;
 }
@@ -181,13 +187,48 @@ button {
   margin: 2.5rem 0 1.875rem;
 }
 
+.cases .devices .pay h3 {
+  margin: 2.5rem 0 3.85rem;
+}
+
 .cases .devices p {
   font-weight: 300;
   font-size: 1.313;
 }
 
+.buy-now {
+  position: relative;
+  background-image: url("../img/buy-now-bg.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 45.938rem;
+  overflow: auto;
+  z-index: 10;
+}
+
+.buy-now .adjustable {
+  width: 15rem;
+  margin-top: 5rem;
+}
+
+.buy-now h2 {
+  font-weight: 400;
+  font-size: 1.563rem;
+  color: #f15a29;
+  margin-bottom: 1.875rem;
+}
+
+.buy-now p {
+  font-weight: 300;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #4c5058;
+  margin-bottom: 1.250rem;
+}
+
 footer .content {
-  padding-bottom: 9.375rem;
+  padding: 3rem 0px 9.375rem 0px;
   text-align: center;
 }
 
@@ -228,6 +269,10 @@ footer .icons > li {
   height: 2.5rem;
   margin: 1.25rem 5px;
   padding: 0.625rem 0;
+}
+
+footer .footer-links a:hover {
+  color: #f15a29;
 }
 
 footer .icons > li:hover {
